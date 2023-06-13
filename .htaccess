@@ -2,7 +2,8 @@
 RewriteEngine On
 
 # forward all archive requests to substack
-RewriteRule ^archive/(.*)$ https://fairdata.substack.com/p/fair-data-digest-$1
+RewriteRule ^archive/?$ https://fairdata.substack.com/archive [R=302,L]
+RewriteRule ^archive/(.*)$ https://fairdata.substack.com/p/fair-data-digest-$1 [R=302,L]
 
 # general forwarding rule, newsletter info on my homepage
 RewriteRule ^$ https://sven-lieber.org/newsletter [R=302,L]
