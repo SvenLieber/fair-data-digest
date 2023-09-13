@@ -2,11 +2,11 @@
 RewriteEngine On
 
 # forward all archive requests to substack
-RewriteRule ^archive/?$ https://fairdata.substack.com/archive [R=302,L]
-RewriteRule ^archive/(.*)$ https://fairdata.substack.com/p/fair-data-digest-$1 [R=302,L]
+RewriteRule ^archive/?$ https://fairdata.substack.com/archive [R=301,L]
+RewriteRule ^archive/(.*)$ https://fairdata.substack.com/p/fair-data-digest-$1 [R=301,L]
 
 # general forwarding rule, newsletter info to substack (nicer overview than on my homepage)
-RewriteRule ^$ https://fairdata.substack.com/ [R=302,L]
+RewriteRule ^$ https://fairdata.substack.com/ [R=301,L]
 
 </IfModule>
 
